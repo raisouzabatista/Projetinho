@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetinho</title>
+    <link rel="shortcut icon" href="./fotos/igual.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="tudo">
+        
+    <p></p>
+    <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="geo.html">Geometria Analítica</a></li>
+        <li><a href="formasPlanas.html">Geometria Plana</a></li>
+        <li><a href="espacial.html">Geometria Espacial</a></li>
+        <li><a href="financeira.html">Matemática Financeira</a></li>
+    
+        <li style="float:right"><a href="creditos.html">Sobre</a></li>
+      </ul>
+    <header class="text-center my-5">
+        <h1 class="display-4">Bem-vindo ao Projeto Orientado</h1>
+        <p class="lead">Geometria Espacial </p>
+
+    </header>
+    <div class="centralizar">
+        <p class="lead">Formas Geometricas: Prismas </p>
+        <img src="./fotos/prismas_preto.jpg" alt="" style="max-height: 250px; max-width: 100%; border-radius: 20px;">
+        <br>
+        <br>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Prisma Triangular </h2>
+                    <div>
+                        <img src="./fotos/triangular.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="ladoTP" class="form-label">Lado da Base</label>
+                                    <input type="number" class="form-control" id="ladoTP" placeholder="Lado" >
+                                </div>
+                                <div class="col">
+                                    <label for="alturaTPB" class="form-label">Altura da Base</label>
+                                    <input type="number" class="form-control" id="alturaTPB" placeholder="Altura">
+                                </div>
+                                <div class="col">
+                                    <label for="alturaTP" class="form-label">Altura da Figura</label>
+                                    <input type="number" class="form-control" id="alturaTP" placeholder="Altura">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Triangular()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar1()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaTP"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Prisma Quadragular </h2>
+                    <div>
+                        <img src="./fotos/quadragular.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="comprimentoQP" class="form-label">Comprim. da Base</label>
+                                    <input type="number" class="form-control" id="comprimentoQP" placeholder="Comprim.">
+                                </div>
+                                <div class="col">
+                                    <label for="larguraQP" class="form-label">Largura da Base</label>
+                                    <input type="number" class="form-control" id="larguraQP" placeholder="Largura">
+                                </div>
+                                <div class="col">
+                                    <label for="alturaQP" class="form-label">Altura da Figura</label>
+                                    <input type="number" class="form-control" id="alturaQP" placeholder="Altura">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Quadrangular()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar2()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaQP"></h3>
+                    </div>
+                </div>
+            </div>
+    
+
+    
+    <p></p>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Prisma Pentagonal </h2>
+                    <div>
+                        <img src="./fotos/pentagonal.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="ladoPP" class="form-label">Lado da Base</label>
+                                    <input type="number" class="form-control" id="ladoPP" placeholder="Lado">
+                                </div>
+                               
+                                <div class="col">
+                                    <label for="alturaPP" class="form-label">Altura da Figura</label>
+                                    <input type="number" class="form-control" id="alturaPP"placeholder="Altura">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Pentagonal()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar3()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaPP"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Prisma Hexagonal </h2>
+                    <div>
+                        <img src="./fotos/hexagonal.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="ladoHP" class="form-label">Lado da Base</label>
+                                    <input type="number" class="form-control" id="ladoHP" placeholder="Lado">
+                                </div>
+                               
+                                <div class="col">
+                                    <label for="alturaHP" class="form-label">Altura da Figura</label>
+                                    <input type="number" class="form-control" id="alturaHP" placeholder="Altura">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Hexagonal()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar4()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaHP"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <p></p>
+
+    <div class="centralizar">
+        <p class="lead">Formas Geometricas: Corpos Redondos </p>
+        <img src="./fotos/redondo_preto.jpg" alt="" style="max-height: 250px; max-width: 100%; border-radius: 20px;">
+        <br>
+        <br>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary"> Cilindro </h2>
+                    <div>
+                        <img src="./fotos/cilindro.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="raioCL" class="form-label">Raio da Base</label>
+                                    <input type="number" class="form-control" id="raioCL" placeholder="Raio">
+                                </div> 
+                                <div class="col">
+                                    <label for="alturaCL" class="form-label">Altura da Figura</label>
+                                    <input type="number" class="form-control" id="alturaCL" placeholder="Altura">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Cilindro()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar5()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaCL"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary"> Cone </h2>
+                    <div>
+                        <img src="./fotos/cone.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="raioC" class="form-label">Raio da Base</label>
+                                    <input type="number" class="form-control" id="raioC" placeholder="Raio">
+                                </div> 
+                                <div class="col">
+                                    <label for="alturaC" class="form-label">Altura da Figura</label>
+                                    <input type="number" class="form-control" id="alturaC" placeholder="Raio">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Cone()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar6()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaC"></h3>
+                    </div>
+                </div>
+            </div>
+    
+
+    
+    <p></p>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Esfera </h2>
+                    <div>
+                        <img src="./fotos/esfera.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="raioE" class="form-label">Raio da Esfera</label>
+                                    <input type="number" class="form-control" id="raioE" placeholder="Raio">
+                                </div>
+                               
+                                
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Esfera()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar7()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaE"></h3>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+           
+      <p></p>
+
+      <div class="centralizar">
+        <p class="lead">Formas Geometricas: Piramides </p>
+        <img src="./fotos/piramides.png" alt="" style="max-height: 250px; max-width: 100%; border-radius: 20px;">
+        <br>
+        <br>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Prisma Triangular </h2>
+                    <div>
+                        <img src="./fotos/Ptriangular.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="ladoPR" class="form-label">Lado da Base</label>
+                                    <input type="number" class="form-control" id="ladoPR" placeholder="Lado">
+                                </div>
+                                <div class="col">
+                                    <label for="alturaPRB" class="form-label">Altura da Base</label>
+                                    <input type="number" class="form-control" id="alturaPRB" placeholder="Altura">
+                                </div>
+                                <div class="col">
+                                    <label for="alturaPR" class="form-label">Altura da Figura</label>
+                                    <input type="number" class="form-control" id="alturaPR" placeholder="Altura">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Triangular_Piramide()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar8()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaPR"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Piramide Retangular </h2>
+                    <div>
+                        <img src="./fotos/Pretangular.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="comprimentoRP" class="form-label">Compri. da Base</label>
+                                    <input type="number" class="form-control" id="comprimentoRP" placeholder="Comprim.">
+                                </div>
+                                <div class="col">
+                                    <label for="larguraRP" class="form-label">Largura da Base</label>
+                                    <input type="number" class="form-control" id="larguraRP" placeholder="Largura">
+                                </div>
+                                <div class="col">
+                                    <label for="alturaRP" class="form-label">Altura da Figura</label>
+                                    <input type="number" class="form-control" id="alturaRP" placeholder="Altura">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Retangular_Piramide()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar9()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaRP"></h3>
+                    </div>
+                </div>
+            </div>
+    
+
+    
+    <p></p>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Piramide Pentagonal </h2>
+                    <div>
+                        <img src="./fotos/Ppentagonal.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="ladoPPP" class="form-label">Lado da Base</label>
+                                    <input type="number" class="form-control" id="ladoPPP" placeholder="Lado">
+                                </div>
+                               
+                                <div class="col">
+                                    <label for="alturaPPP" class="form-label">Altura da Figura</label>
+                                    <input type="number" class="form-control" id="alturaPPP" placeholder="Altura">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Pentagonal_Piramide()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar10()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaPPP"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Tetraedro regular </h2>
+                    <div>
+                        <img src="./fotos/Ptriangular_regular.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="ladoPT" class="form-label">Lado da Base</label>
+                                    <input type="number" class="form-control" id="ladoPT" placeholder="Lado">
+                                </div>
+                              
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Tetraedro()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar11()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaPT"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p></p>
+
+    <script src="codigoesapcial.js"></script>
+</body>
+
+</html>

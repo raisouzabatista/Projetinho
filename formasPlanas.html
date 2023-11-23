@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetinho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./fotos/igual.png" type="image/x-icon">
+
+</head>
+
+<body class="tudo">
+        
+    <p></p>
+    <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="geo.html">Geometria Analítica</a></li>
+        <li><a href="formasPlanas.html">Geometria Plana</a></li>
+        <li><a href="espacial.html">Geometria Espacial</a></li>
+        <li><a href="financeira.html">Matemática Financeira</a></li>
+    
+        <li style="float:right"><a href="creditos.html">Sobre</a></li>
+      </ul>
+    <header class="text-center my-5">
+        <h1 class="display-4">Bem-vindo ao Projeto Orientado</h1>
+        <p class="lead">Geometria Plana </p>
+
+    </header>
+    <div class="centralizar">
+        <p class="lead">Formas Geometricas: Planas </p>
+        <img src="./fotos/figuras.png" alt="" style="max-height: 250px; max-width: 100%; border-radius: 20px;">
+        <br>
+        <br>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Quadrado </h2>
+                    <div>
+                        <img src="./fotos/quadrado.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="ladoQ" class="form-label">Lado do Quadrado</label>
+                                    <input type="number" class="form-control" id="ladoQ" placeholder="Lado">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Quadrado()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar1()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaQ"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Triângulo </h2>
+                    <div>
+                        <img src="./fotos/triangulo.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="alturaT" class="form-label">Altura do Triângulo</label>
+                                    <input type="number" class="form-control" id="alturaT" placeholder="Altura">
+                                </div>
+                                <div class="col">
+                                    <label for="baseT" class="form-label">Base do Triângulo</label>
+                                    <input type="number" class="form-control" id="baseT" placeholder="Base">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Triangulo()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar2()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaTri"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <p></p>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Círculo </h2>
+                    <div>
+                        <img src="./fotos/circulo.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="raio" class="form-label">Raio do Circulo</label>
+                                    <input type="number" class="form-control" id="raio" placeholder="Raio">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Circulo()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar3()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaC"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Retângulo </h2>
+                    <div>
+                        <img src="./fotos/retangulo.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="alturaR" class="form-label">Comprim. do Retângulo</label>
+                                    <input type="number" class="form-control" id="alturaR" placeholder="Comprim.">
+                                </div>
+                                <div class="col">
+                                    <label for="ladoR" class="form-label">Largura do Retângulo</label>
+                                    <input type="number" class="form-control" id="ladoR" placeholder="Largura">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Retangulo()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar4()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaRet"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <p></p>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Losango</h2>
+                    <div>
+                        <img src="./fotos/losangulo.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="diagonalM" class="form-label">Diagonal Maior do Losango</label>
+                                    <input type="number" class="form-control" id="diagonalM" placeholder="Diagonal Maior">
+                                </div>
+                                <div class="col">
+                                    <label for="diagonalMe" class="form-label">Diagonal Menor do Losango</label>
+                                    <input type="number" class="form-control" id="diagonalMe" placeholder="Diagonal Menor">
+                                </div>
+                                
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Losango()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar5()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaL"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Paralelogramo </h2>
+                    <div>
+                        <img src="./fotos/paralelogramo.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="alturaP" class="form-label">Altura do Paralelogramo</label>
+                                    <input type="number" class="form-control" id="alturaP" placeholder="Altura">
+                                </div>
+                                <div class="col">
+                                    <label for="baseP" class="form-label">Base do Paralelogramo</label>
+                                    <input type="number" class="form-control" id="baseP" placeholder="Base">
+                                </div>
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Paralelogramo()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar6()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaP"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <p></p>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Trapézio</h2>
+                    <div>
+                        <img src="./fotos/trapezio.png" alt="" style="max-height: 150px; max-width: 100%;">
+                        <h3>Digite seus valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="baseM" class="form-label">Base Maior do Trapézio</label>
+                                    <input type="number" class="form-control" id="baseM" placeholder="Base Maior">
+                                </div>
+                                <div class="col">
+                                    <label for="baseMe" class="form-label">Base Menor do Trapézio</label>
+                                    <input type="number" class="form-control" id="baseMe" placeholder="Base Menor">
+                                </div>
+                                <div class="col">
+                                    <label for="alturaTra" class="form-label">Altura do Trapézio</label>
+                                    <input type="number" class="form-control" id="alturaTra" placeholder="Altura">
+                                </div>
+                                
+                                <p></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="reset" class="btn btn-primary" onclick="Trapezio()">Calcular Área</button>
+                                    <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar7()">Limpar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h3 id="areaTra"></h3>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+    <script src="codigoplanas.js"></script>
+</body>
+
+</html>

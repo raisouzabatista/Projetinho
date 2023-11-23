@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetinho</title>
+    <link rel="shortcut icon" href="/fotos/igual.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="tudo">
+    <p></p>
+
+    <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="geo.html">Geometria Analítica</a></li>
+      <li><a href="formasPlanas.html">Geometria Plana</a></li>
+      <li><a href="espacial.html">Geometria Espacial</a></li>
+      <li><a href="financeira.html">Matemática Financeira</a></li>
+  
+      <li style="float:right"><a href="creditos.html">Sobre</a></li>
+      </ul>
+
+
+
+    <header class="text-center my-5">
+        <h1 class="display-4">Bem-vindo ao Projeto Orientado</h1>
+        <p class="lead">Matemática Financeira </p>
+    </header>
+
+    <div class="centralizar">
+        <p class="lead">Grafico: Juros Simpes X Juros Compostos</p>
+        <img src="./fotos/jurosP.png" alt="" style="max-height: 250px; max-width: 100%; border-radius: 20px;">
+        <br>
+        <br>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Juros Simples</h2>
+                    <div>
+                        <h3>Digite os Valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="juros" class="form-label">Juros</label>
+                                    <input type="number" class="form-control" id="juros" placeholder="Juros">
+                                </div>
+                                <div class="col">
+                                    <label for="capital" class="form-label">Capital</label>
+                                    <input type="number" class="form-control" id="capital" placeholder="Capital">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="tempo" class="form-label">Duração</label>
+                                    <input type="number" class="form-control" id="tempo" placeholder="Duração">
+                                </div>
+                            
+                            </div>
+                            <p></p>
+                            <div class="d-flex justify-content-center">
+                                <button type="reset" class="btn btn-primary" onclick="Simples()">Calcular
+                                </button>
+                                <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar1()">Limpar
+                                </button>
+                            </div>
+                        </form>
+                        <h3 id="area1"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-light p-4">
+                    <h2 class="text-primary">Juros Compostos</h2>
+                    <div>
+                        <h3>Digite os Valores</h3>
+                        <form action="">
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="juros" class="form-label">Juros</label>
+                                    <input type="number" class="form-control" id="juros2" placeholder="Juros">
+                                </div>
+                                <div class="col">
+                                    <label for="capital" class="form-label">Capital</label>
+                                    <input type="number" class="form-control" id="capital2" placeholder="Capital">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label for="tempo" class="form-label">Duração</label>
+                                    <input type="number" class="form-control" id="tempo2" placeholder="Duração">
+                                </div>
+                            
+                            </div>
+                            <p></p>
+                            <div class="d-flex justify-content-center">
+                                <button type="reset" class="btn btn-primary" onclick="Compostos()">Calcular
+                                </button>
+                                <button type="reset" class="btn btn-secondary ms-2" onclick="Limpar2()">Limpar
+                                </button>
+                            </div>
+                        </form>
+                        <h3 id="area2"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p></p>
+
+    <script src="codigofinanceira.js"></script>
+</body>
+
+</html>
